@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.my</groupId>
-	<artifactId>spring.web.23.03</artifactId>
+	<artifactId>spring.web</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
 	<name>spring.web</name>
@@ -57,6 +57,14 @@
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.glassfish.web</groupId>
+		    <artifactId>jakarta.servlet.jsp.jstl</artifactId>		   
+		</dependency>
+		<dependency>
+		    <groupId>jakarta.servlet.jsp.jstl</groupId>
+		    <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>		   
 		</dependency>
 	</dependencies>
 
