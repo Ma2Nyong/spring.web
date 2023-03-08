@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller("ch02.ex03")
 @RequestMapping("ch02/ex03/user")
 public class UserController {
-//	@GetMapping
+	@GetMapping
 	public String userIn() {
 		return "ch02/ex03/userIn";
 	}
 	
-//	@PostMapping
+	@PostMapping
 	public String userOut(User user) {
 		return "ch02/ex03/userOut";
 	}

@@ -3,6 +3,7 @@ package com.my.spring.web.ch02.ex04;
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -41,7 +42,8 @@ public class CheckController {
 	}
 	
 	@PostMapping("checkbox")
-	public String checkbox(@ModelAttribute("fruit")@RequestParam("fruit") ArrayList<String> fruits) {
+	public String checkbox(@RequestParam("fruit") ArrayList<String> fruits, Model model) {
+		model.addAttribute("fruits", fruits);
 		return "ch02/ex04/checkboxOut";
 	}
 }
