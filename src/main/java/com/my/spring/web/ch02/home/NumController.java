@@ -9,14 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("ch02/home")
 public class NumController {
 	@GetMapping("numIn")
-	public String numinIn() {
+	public String numIn() {
 		return "ch02/home/numIn";
 	}
 	
-	@PostMapping("numIn")
-	public String numIn(int inputNumber) {
-		
-		
+	@GetMapping("numOut")
+	public String numOut(Number num) {
 		return "ch02/home/numOut";
 	}
 }
