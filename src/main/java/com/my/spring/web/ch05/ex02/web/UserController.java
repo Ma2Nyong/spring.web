@@ -17,7 +17,7 @@ import com.my.spring.web.ch05.domain.User;
 import com.my.spring.web.ch05.ex02.service.UserService;
 
 @RestController("ch05.ex02.userController")
-@RequestMapping("ch05.ex02.user")
+@RequestMapping("ch05/ex02/user")
 public class UserController {
 	@Autowired private UserService userService;
 	
@@ -30,7 +30,7 @@ public class UserController {
 	@GetMapping("list")
 	public List<User> getUser() {
 		return userService.getUsers();
-	}
+	} // Rest를 썼기에 view를 return 하지 않고 model을 return한다
 	
 	@PostMapping("add")
 	public void addUser(@RequestBody User user) {
@@ -46,5 +46,4 @@ public class UserController {
 	public void delUser(@PathVariable int userId) {
 		userService.delUser(userId);
 	}
-	
 }
